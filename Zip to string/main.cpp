@@ -3,24 +3,25 @@
 
 int main() {
 	string convetirng_string;
+	string string;
 	int sizex;
 	int sizey;
 	cout << "Input Y size picture: ";
 	cin >> sizey;
+	cout << "Input X size picture: ";
+	cin >> sizex;
 	getchar();
+
+	cout << "Input your picture (w/b): " << endl;
 	for (int i = 0; i < sizey; i++)
 	{
-		cout << "Input your picture (w/b): ";
-		getline(cin, convetirng_string);
+		getline(cin, string);
+		convetirng_string += string;
 	}
 
 
 
-	cout << "Input size picture: ";
-	cin >> sizex;
-
-
-	cout << converting_to_zip(convetirng_string, sizex);
+	cout << "Converting your picture to RLE\n" + converting_to_zip(convetirng_string, sizex, sizey);
 
 	return 0;
 }
