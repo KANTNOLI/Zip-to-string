@@ -16,7 +16,8 @@ string converting_to_zip(string convert, int sizex, int sizey) {
 			count++;
 		}
 		else {
-			msg += (count == 1 ? char1 : count + char1);
+			msg += count == 1 ? "" : to_string(count);
+			msg += char1;
 			count = 1;
 		}
 
@@ -24,7 +25,9 @@ string converting_to_zip(string convert, int sizex, int sizey) {
 		{
 			if (sizex - count < sizex && count > 1)
 			{
-				msg += (count == 1  ? char1 : count + char1);
+
+				msg += count == 1 ? "" : to_string(count - 1);
+				msg += char1;
 			}
 			msg += "\n";
 			count = 1;
