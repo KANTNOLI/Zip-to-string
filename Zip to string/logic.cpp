@@ -5,8 +5,8 @@ string converting_to_zip(string convert, int sizex, int sizey) {
 	int count2 = 1;
 	char char2 = convert[count2];
 	string msg = "";
-
 	int work_size = sizex * sizey;
+	
 
 	for (int i = 0; i < work_size; i++)
 	{

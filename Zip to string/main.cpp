@@ -4,8 +4,7 @@
 int main() {
 	string convetirng_string;
 	string string;
-	int sizex;
-	int sizey;
+	int sizex, sizey;
 	cout << "Input Y size picture: ";
 	cin >> sizey;
 	cout << "Input X size picture: ";
@@ -18,8 +17,6 @@ int main() {
 		getline(cin, string);
 		convetirng_string += string;
 	}
-
-
 
 	cout << "Converting your picture to RLE\n" + converting_to_zip(convetirng_string, sizex, sizey);
 
