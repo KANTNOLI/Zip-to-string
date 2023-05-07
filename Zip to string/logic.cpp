@@ -4,14 +4,16 @@ string converting_to_zip(string convert, int sizex, int sizey) {
 	int count = 1;
 	int count2 = 1;
 	bool flag = true;
-	char char2 = convert[count2];
+	char char1 = ' ';
+	char char2 = ' ';
 	string msg = "";
 	int work_size = sizex * sizey;
 
 	for (int i = 0; i < work_size; i++)
 	{
-		char char1 = convert[i];
+		char1 = convert[i];
 		char2 = convert[i + 1];
+
 		if (char1 == char2)
 		{
 			count++;
@@ -19,10 +21,10 @@ string converting_to_zip(string convert, int sizex, int sizey) {
 		else if (count != 1) { 
 			msg += to_string(count);
 			msg += char1;
-			flag = false;
+			flag = false; 
 			count = 1;
 		}
-		else if (count == 1){
+		else{
 			msg += char1; 
 			flag = false;
 			count = 1; 
@@ -38,10 +40,10 @@ string converting_to_zip(string convert, int sizex, int sizey) {
 				msg += char1;
 			}
 			else if(flag){
-				msg += char1;
-				count = 1;
+				msg += char1;  
+				count = 1; 
 			}
-			msg += "\n";
+			msg += "\n"; 
 			count = 1;
 			count2 = 0;
 		}

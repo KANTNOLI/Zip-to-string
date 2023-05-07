@@ -18,6 +18,7 @@ int main() {
 		convetirng_string += string;
 	}
 
+	system("cls");
 	cout << "Converting your picture to RLE\n" + converting_to_zip(convetirng_string, sizex, sizey);
 
 	return 0;
