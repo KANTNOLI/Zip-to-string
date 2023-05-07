@@ -15,19 +15,27 @@ string converting_to_zip(string convert, int sizex, int sizey) {
 		{
 			count++;
 		}
-		else {
-			msg += count == 1 ? "" : to_string(count);
+		else if (count != 1) { 
+			msg += to_string(count);
 			msg += char1;
 			count = 1;
+		}
+		else {
+			msg += char1; 
+			count = 1; 
 		}
 
 		if (count2 == sizex)
 		{
-			if (sizex - count < sizex && count > 1)
+			if (sizex - count < sizex and count > 2)
 			{
 
-				msg += count == 1 ? "" : to_string(count - 1);
+				msg += to_string(count - 1);
 				msg += char1;
+			}
+			else {
+				msg += char1;
+				count = 1;
 			}
 			msg += "\n";
 			count = 1;
