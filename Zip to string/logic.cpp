@@ -1,18 +1,23 @@
 #include "logic.h"
-
+ 
 string converting_to_zip(string convert, int sizex, int sizey) {
-	int count = 1;
-	int count2 = 1;
+	char w = 'w', b = ' b';
+	int count = 1, count2 = 1;
+	char char1, char2;
 	bool flag = true;
-	char char1 = ' ';
-	char char2 = ' ';
 	string msg = "";
-	int work_size = sizex * sizey;
+	int all_size = sizex * sizey;
 
-	for (int i = 0; i < work_size; i++)
+	for (int i = 0; i < all_size; i++)
 	{
 		char1 = convert[i];
 		char2 = convert[i + 1];
+
+
+		if (char1 != w and char1 != b)
+		{
+			return "Error input! Your gay";
+		}
 
 		if (char1 == char2)
 		{
